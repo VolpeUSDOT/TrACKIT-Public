@@ -1,0 +1,40 @@
+# End User License Agreement 
+## Transportation Access and Connectivity Key Insights Tool (TrACKIT)
+ 
+**IMPORTANT: READ CAREFULLY.** THIS END USER LICENSE AGREEMENT (“AGREEMENT”) IS A LEGAL AGREEMENT BETWEEN YOU (IN YOUR CAPACITY AS AN INDIVIDUAL AND AS AN AGENT FOR YOUR COMPANY, INSTITUTION, OR OTHER ENTITY) (COLLECTIVELY, “YOU” OR “LICENSEE”) AND THE UNITED STATES (U.S.) DEPARTMENT OF TRANSPORTATION, JOHN A. VOLPE NATIONAL TRANSPORTATION SYSTEMS CENTER (“VOLPE CENTER”). DOWNLOADING, INSTALLING, USING, OR COPYING OF THE SOFTWARE (AS DEFINED BELOW) BY YOU OR BY A THIRD PARTY ON YOUR BEHALF INDICATES YOUR AGREEMENT TO BE BOUND BY THE TERMS AND CONDITIONS OF THIS AGREEMENT. IF YOU DO NOT AGREE TO THESE TERMS AND CONDITIONS, DO NOT DOWNLOAD, INSTALL, OR USE THE SOFTWARE.
+ 
+---
+
+**Description of TrACKIT:** “Transportation Access and Connectivity Key Insights Tool (TrACKIT)” is a software tool that the Volpe Center created to visualize transportation access and connectivity.
+ 
+**1. LICENSE.** The Volpe Center grants you, and you hereby accept, a non-exclusive, non-transferable, royalty-free license to install and use the source code, together with any associated media, printed materials, and electronic documentation (if any) provided by the Volpe Center (collectively, the “Software” or “TrACKIT”), subject to the following terms and conditions:
+ 
+* **a)** The Software may be used solely by the individual downloading the Software who has agreed to the terms of this license. You may not transfer a copy of the Software to any third party, nor may you allow the Software to be accessed over a network or the internet in a manner that would allow users to access the Software who are not employed by you, without the prior written consent of the Volpe Center;
+* **b)** You may copy the Software solely to the extent reasonably necessary to exercise the foregoing license and for backup and archival purposes, provided however that: 
+  * **(i)** you must reproduce all proprietary notices on any copies of the Software and you must not remove or alter those notices; 
+  * **(ii)** all copies of the Software shall be subject to the terms of this Agreement; 
+  * **(iii)** you may not otherwise copy or allow copies of the Software to be made; and 
+  * **(iv)** you may not use the Volpe Center, U.S. Department of Transportation, or U.S. government name nor any adaptation thereof, nor the names of any their employees in any advertising, promotional, or sales literature, except that you as the licensee shall give appropriate credits in professional journals and publications as follows: 
+  > *"Volpe, The National Transportation Systems Center. 2026. Transportation Access and Connectivity Key Insights Tool (TrACKIT). Cambridge, MA."*
+ 
+**2. NO MAINTENANCE OR SUPPORT.** The Volpe Center is under no obligation whatsoever to: (i) provide maintenance or support for the Software; or (ii) to notify you of bug fixes, patches, or upgrades to the Software (if any). If, in its sole discretion, the Volpe Center makes a Software bug fix, patch, or upgrade available to you and the Volpe Center does not separately enter into a written license agreement with you relating to such bug fix, patch, or upgrade, then it shall be deemed incorporated into the Software and subject to this Agreement. 
+
+**3. LICENSE FEE.** The Software is provided at no cost to the licensee.
+
+**4. U.S. GOVERNMENT RIGHTS.** The Software was developed by the Volpe Center. The U.S. Department of Transportation and U.S. Government hereby reserve all rights, title, and interest in and to the Software which are not explicitly granted to you herein; and without limiting the generality of the foregoing, you do not acquire any rights, express or implied, in the Software, other than those specifically set forth in this Agreement.
+
+**5. WARRANTY DISCLAIMER.** THE SOFTWARE IS SUPPLIED “AS IS” WITHOUT WARRANTY OF ANY KIND. THE VOLPE CENTER, THE U.S., THE U.S. DEPARTMENT OF TRANSPORTATION, AND THEIR EMPLOYEES: (i) DISCLAIM ANY WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, OR NON-INFRINGEMENT; (ii) DO NOT ASSUME ANY LEGAL LIABILITY OR RESPONSIBILITY FOR THE ACCURACY, COMPLETENESS, OR USEFULNESS OF THE SOFTWARE; (iii) DO NOT REPRESENT THAT USE OF THE SOFTWARE WOULD NOT INFRINGE PRIVATELY OWNED RIGHTS; AND (iv) DO NOT WARRANT THAT THE SOFTWARE WILL FUNCTION UNINTERRUPTED, THAT IT IS ERROR-FREE, OR THAT ANY ERRORS WILL BE CORRECTED.
+
+**6. LIMITATION OF LIABILITY.** IN NO EVENT WILL THE VOLPE CENTER, U.S. DEPARTMENT OF TRANSPORTATION, OR THE U.S. BE LIABLE FOR ANY INDIRECT, INCIDENTAL, CONSEQUENTIAL, SPECIAL, OR PUNITIVE DAMAGES OF ANY KIND OR NATURE, INCLUDING BUT NOT LIMITED TO LOSS OF PROFITS OR LOSS OF DATA, FOR ANY REASON WHATSOEVER, WHETHER SUCH LIABILITY IS ASSERTED ON THE BASIS OF CONTRACT, TORT (INCLUDING NEGLIGENCE OR STRICT LIABILITY), OR OTHERWISE, EVEN IF THE VOLPE CENTER HAS BEEN WARNED OF THE POSSIBILITY OF SUCH LOSS OR DAMAGES. IN NO EVENT SHALL THE VOLPE CENTER’S LIABILITY FOR DAMAGES ARISING FROM OR IN CONNECTION WITH THIS AGREEMENT EXCEED THE AMOUNT PAID BY YOU FOR THE SOFTWARE.
+
+**7. INDEMNITY.** You shall indemnify, defend, and hold harmless the Volpe Center, the U.S. Department of Transportation, the U.S. Government, the Software developers, the Software sponsors, and their agents, officers, and employees, against any and all claims, suits, losses, damage, costs, fees, and expenses arising out of or in connection with this Agreement. You shall pay all costs incurred by the Volpe Center in enforcing this provision, including reasonable attorney fees.
+
+**8. TERM AND TERMINATION.** The license granted to you under this Agreement will continue perpetually unless terminated by the Volpe Center in accordance with this Agreement. If you breach any term of this Agreement and fail to cure such breach within thirty (30) days of the date of written notice, this Agreement shall immediately terminate. Upon any such termination, you shall immediately cease using the Software and destroy all copies of the Software. Termination shall not relieve you from your obligations arising prior to such termination. Notwithstanding any provision of this Agreement to the contrary, Sections 4 through 10 shall survive termination of this Agreement.
+
+**9. EXPORT CONTROLS.** You shall observe all applicable U.S. and foreign laws and regulations (if any) with respect to the export, re-export, diversion, or transfer of the Software, related technical data, and direct products thereof, including, without limitation, the International Traffic in Arms Regulations (ITAR) and the Export Administration Regulations. The export of any technology from the U.S., including without limitation the Software and related technical data, may require some form of export control license from the U.S. Government and, pursuant to U.S. laws, and failure to obtain any required export control license may result in criminal liability under U.S. laws.
+ 
+**10. GENERAL.** This Agreement shall be governed by the laws of the U.S. No provision in either party's purchase orders, or in any other business forms employed by either party will supersede the terms of this Agreement, and no modification or amendment of this Agreement is binding, unless in writing signed by a duly authorized representative of each party. This Agreement is binding upon and shall inure to the benefit of the Volpe Center, its successors, and assignees. This Agreement represents the entire understanding of the parties, and supersedes all previous communications, written or oral, relating to the subject of this Agreement. If you have questions concerning TrACKIT including but not limited to seeking permission for other uses, your interest in collaborating with the Volpe Center, or providing feedback regarding the Software, please contact the TrACKIT Team at TrACKIT-Team@dot.gov.
+ 
+---
+
+**BY DOWNLOADING, INSTALLING, OR USING THE SOFTWARE, YOU ARE INDICATING YOUR ACCEPTANCE OF THE TERMS AND CONDITIONS HEREIN.**

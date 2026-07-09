@@ -1,0 +1,43 @@
+name: Release to TrACKIT-Public
+on:
+  release:
+    types: [released]
+permissions:
+  contents: read
+jobs:
+  copy-release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout-internal
+        uses: actions/checkout@v7
+        with: 
+          path: internal
+          ref: ${{ github.ref }}
+      - name: checkout-external
+        uses: actions/checkout@v7
+        with:
+          repository: VolpeUSDOT/TrACKIT-Public
+          token: ${{ secrets.TRACKIT_REPO_TOKEN }}
+          ref: main
+          path: external
+      - name: copy from internal to external repo and zip up
+        run: |
+          cd external
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --global url."https://x-access-token:${{ secrets.TRACKIT_REPO_TOKEN }}@github.com/".insteadOf "https://github.com/"
+          git rm -rf .
+          rsync -av --exclude=".git/*" ../internal/. ./
+          git add -A
+          git commit --allow-empty -m "Copy files to public repo for release"
+          git push
+          git archive --output=../TrACKIT.zip HEAD
+          cd ../
+      - name: copy release on external repo, with TrACKIT.zip
+        uses: softprops/action-gh-release@v3
+        with: 
+          repository: VolpeUSDOT/TrACKIT-Public
+          token: ${{ secrets.TRACKIT_REPO_TOKEN }}
+          tag_name: ${{ github.event.release.tag_name }}
+          body: ${{ github.event.release.body }}
+          files: TrACKIT.zip

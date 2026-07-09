@@ -1,0 +1,677 @@
+#Structure:
+#key name is to the left of the :
+#pointer\address is the same key name with & in front
+#the next line indented below is the value. Change the value to change the field name
+
+## Feature class and field name variables to avoid hard-coding in code modules ###############################
+
+field_name_tool_version: &field_name_tool_version
+    tool_version
+
+# Project
+fc_name_project_coverage_area: &fc_name_project_coverage_area
+    project_coverage_area
+fc_name_project_centroid: &fc_name_project_centroid
+    project_centroid
+fc_name_project_nodes: &fc_name_project_nodes
+    project_network_nodes
+fc_name_project_ways: &fc_name_project_ways
+    project_network_ways
+fc_name_project_pois_nodes: &fc_name_project_pois_nodes
+    project_pois_nodes
+fc_name_custom_pois_nodes: &fc_name_custom_pois_nodes
+    custom_pois
+fc_name_water_utm: &fc_name_water_utm
+    water_features_utm
+land_area: &land_area
+    land_area
+fc_scenario_table: &fc_scenario_table
+    project_scenarios
+field_name_way_id: &field_name_way_id
+    network_link_id
+field_name_node_id: &field_name_node_id
+    network_node_id
+field_name_water_id: &field_name_water_id
+    water_id
+field_name_utm: &field_name_utm
+    utmepsg
+field_name_project_name: &field_name_project_name
+    project_name
+field_name_radius_dest: &field_name_radius_dest
+    radius_destination
+
+
+# Scenario
+fc_name_scenario_coverage_area: &fc_name_scenario_coverage_area
+    scenario_coverage_area
+fc_name_scenario_nodes: &fc_name_scenario_nodes
+    scenario_network_nodes
+fc_name_scenario_ways: &fc_name_scenario_ways
+    scenario_network_ways
+fc_name_scenario_pois_nodes: &fc_name_scenario_pois_nodes
+    scenario_pois_nodes
+field_name_scenario_name: &field_name_scenario_name
+    scenario_name
+field_name_scenario_poidist: &field_name_scenario_poidist
+    poi_distance_ft
+field_name_scenario_buffer: &field_name_scenario_buffer
+    scenario_radius_mi
+field_name_scenario_creation: &field_name_scenario_creation
+    creation_date
+field_name_scenario_gdb: &field_name_scenario_gdb
+    gdb_name
+field_name_scenario_modes: &field_name_scenario_modes
+    modes
+field_name_action: &field_name_action
+    action
+field_name_scenario_lat: &field_name_scenario_lat
+    scenario_lat
+field_name_scenario_lon: &field_name_scenario_lon
+    scenario_lon
+field_name_selected_poi_categories: &field_name_selected_poi_categories
+    selected_poi_categories
+# Origins
+fc_name_custom_origin_points: &fc_name_custom_origin_points
+    custom_origin_points_template
+fc_name_custom_origin_polygons: &fc_name_custom_origin_polygons
+    custom_origin_polygons_template
+fc_name_origin_nodes: &fc_name_origin_nodes
+    origin_nodes
+field_name_origin_id: &field_name_origin_id
+    origin_id
+field_name_origin_name: &field_name_origin_name
+    origin_name
+field_name_origin_type: &field_name_origin_type
+    origin_type
+field_name_population: &field_name_population
+    population
+field_name_housing_units: &field_name_housing_units
+    housing_unit_count
+field_name_origin_lat: &field_name_origin_lat
+    origin_lat
+field_name_origin_lon: &field_name_origin_lon
+    origin_lon
+
+#Census block feature class names
+fc_name_census_block: &fc_name_census_block
+    census_block_polygons
+fc_name_census_block_prj: &fc_name_census_block_prj
+    census_block_polygons_projected
+
+# Travel network fields
+field_name_link_origid: &field_name_link_origid
+    associated_link_ids
+field_name_from_id: &field_name_from_id
+    from_node_id
+field_name_to_id: &field_name_to_id
+    to_node_id
+field_name_motorway: &field_name_motorway
+    is_motorway
+field_name_oneway: &field_name_oneway
+    is_oneway
+field_name_count: &field_name_count
+    count
+field_name_highway: &field_name_highway
+    highway
+field_name_alltags: &field_name_alltags
+    alltags
+field_name_cfcc: &field_name_cfcc
+    cfcc
+field_name_sidewalk: &field_name_sidewalk
+    sidewalk
+field_name_bikelane: &field_name_bikelane
+    bikelane
+field_name_separated_bike: &field_name_separated_bike
+    separated_bike
+field_name_separated_sidewalk: &field_name_separated_sidewalk
+    separated_sidewalk
+field_name_reverse_bike_lane: &field_name_reverse_bike_lane
+    reverse_bike_lane
+field_name_reverse_ped_allowed: &field_name_reverse_ped_allowed
+    reverse_ped_allowed
+field_name_length_meters: &field_name_length_meters
+    length_meters
+field_name_prenetwork: &field_name_prenetwork
+    prenetwork
+field_name_postnetwork: &field_name_postnetwork
+    postnetwork
+field_names_prepost:
+- *field_name_prenetwork
+- *field_name_postnetwork
+
+# Mode-related fields
+field_name_vehicle_mode: &field_name_vehicle_mode
+    vehicle
+field_name_truck_mode: &field_name_truck_mode
+    truck
+field_name_p_bicycle_mode: &field_name_p_bicycle_mode
+    p_bike
+field_name_bicycle_mode: &field_name_bicycle_mode
+    bike
+field_name_pedestrian_mode: &field_name_pedestrian_mode
+    pedestrian
+field_name_p_pedestrian_mode: &field_name_p_pedestrian_mode
+    p_pedestrian
+
+field_name_speed_vehicle: &field_name_speed_vehicle
+    speed_vehicle
+field_name_speed_truck: &field_name_speed_truck
+    speed_truck
+field_name_speed_bicycle: &field_name_speed_bicycle
+    speed_bike
+field_name_speed_p_bike: &field_name_speed_p_bike
+    speed_p_bike
+field_name_speed_pedestrian: &field_name_speed_pedestrian
+    speed_pedestrian
+
+field_name_fft_vehicle: &field_name_fft_vehicle
+    fft_vehicle
+field_name_fft_truck: &field_name_fft_truck
+    fft_truck
+field_name_fft_bike: &field_name_fft_bike
+    fft_bike
+field_name_fft_p_bike: &field_name_fft_p_bike
+    fft_p_bike
+field_name_fft_ped: &field_name_fft_ped
+    fft_pedestrian
+
+# POI fields
+field_name_poi_original: &field_name_poi_original
+    original_poi_id
+field_name_poi_wayid: &field_name_poi_wayid
+    original_way_id
+field_name_poi_finalid: &field_name_poi_finalid
+    poi_id
+field_name_poi_fclass: &field_name_poi_fclass
+    fclass
+
+# Matched POI table and fields
+fc_matched_poi_table: &fc_matched_poi_table
+    network_nodes_to_poi_match
+fc_matched_poi_summary_table: &fc_matched_poi_summary_table
+    network_nodes_to_poi_match_summary
+field_name_poi_nodeid: &field_name_poi_nodeid
+    matched_network_node_id
+field_name_poi_type: &field_name_poi_type
+    poi_type
+field_name_poi_distance: &field_name_poi_distance
+    distance
+field_name_poi_fftwalk: &field_name_poi_fftwalk
+    fft_walk
+
+
+
+# Network names and fields
+fc_network_table: &fc_network_table
+    networks
+field_name_network_uid: &field_name_network_uid
+    networkuid
+field_name_network_edgeweight: &field_name_network_edgeweight
+    network_edgeweight
+field_name_network_filename: &field_name_network_filename
+    network_filename
+field_name_network_mode: &field_name_network_mode
+    network_mode
+field_name_network_prepost: &field_name_network_prepost
+    network_prepost
+
+# Integrated network
+fc_name_integrated_network: &fc_name_integrated_network
+    integrated_network_for_analysis
+fc_name_integrated_nodes: &fc_name_integrated_nodes
+    integrated_nodes_for_analysis
+fc_name_changed: &fc_name_changed
+    changed_links
+
+# Miscellaneous
+fc_name_shortest_paths: &fc_name_shortest_paths
+    shortest_paths
+
+
+## Field definitions #########################################################################################
+
+project_ways_fc:
+- add_index: true
+  featureClass: null
+  field_alias: Link ID
+  field_length: 100
+  field_name: *field_name_way_id
+  field_type: TEXT
+- add_index: true
+  featureClass: null
+  field_alias: From Node ID
+  field_length: 100
+  field_name: *field_name_from_id
+  field_type: TEXT
+- add_index: true
+  featureClass: null
+  field_alias: To Node ID
+  field_length: 100
+  field_name: *field_name_to_id
+  field_type: TEXT
+- featureClass: null
+  field_alias: All Original Tags
+  field_length: 900
+  field_name: *field_name_alltags
+  field_type: TEXT
+- featureClass: null
+  field_alias: Segment is Oneway
+  field_length: 100
+  field_name: *field_name_oneway
+  field_type: TEXT
+- featureClass: null
+  field_alias: Tag CFCC
+  field_length: 500
+  field_name: *field_name_cfcc
+  field_type: TEXT
+- featureClass: null
+  field_alias: Likely Has Sidewalk
+  field_name: *field_name_sidewalk
+  field_type: LONG
+- featureClass: null
+  field_alias: Likely Has Bicycle Lane
+  field_name: *field_name_bikelane
+  field_type: LONG
+- featureClass: null
+  field_alias: Likely Has Separated Bicycle Lane
+  field_name: *field_name_separated_bike
+  field_type: LONG
+- featureClass: null
+  field_alias: Likely Has Separated Sidewalk
+  field_name: *field_name_separated_sidewalk
+  field_type: LONG
+- featureClass: null
+  field_alias: Likely Has Reverse Bike Lane
+  field_name: *field_name_reverse_bike_lane
+  field_type: LONG
+- featureClass: null
+  field_alias: Reverse Ped Allowed on Oneway
+  field_name: *field_name_reverse_ped_allowed
+  field_type: LONG
+- featureClass: null
+  field_alias: Speed for Vehicle
+  field_name: *field_name_speed_vehicle
+  field_type: DOUBLE
+- featureClass: null
+  field_alias: Speed for Freight Truck
+  field_name: *field_name_speed_truck
+  field_type: DOUBLE
+- featureClass: null
+  field_alias: Speed for Walking
+  field_name: *field_name_speed_pedestrian
+  field_type: DOUBLE
+- featureClass: null
+  field_alias: Speed for Bicycle
+  field_name: *field_name_speed_bicycle
+  field_type: DOUBLE
+- featureClass: null
+  field_alias: Speed for Low Stress Bicycle
+  field_name: *field_name_speed_p_bike
+  field_type: DOUBLE
+- featureClass: null
+  field_alias: Segment Length in Meters
+  field_name: *field_name_length_meters
+  field_type: DOUBLE
+- featureClass: null
+  field_alias: Bicycle Free Flow Travel On Segment
+  field_name: *field_name_fft_bike
+  field_type: DOUBLE
+- featureClass: null
+  field_alias: Pedestrian Free Flow Travel On Segment
+  field_name: *field_name_fft_ped
+  field_type: DOUBLE
+- featureClass: null
+  field_alias: Vehicle Free Flow Travel On Segment
+  field_name: *field_name_fft_vehicle
+  field_type: DOUBLE
+- featureClass: null
+  field_alias: Freight Truck Free Flow Travel On Segment
+  field_name: *field_name_fft_truck
+  field_type: DOUBLE
+- featureClass: null
+  field_alias: Low-Stress Bike Free Flow Travel On Segment
+  field_name: *field_name_fft_p_bike
+  field_type: DOUBLE
+
+project_nodes_fc:
+- add_index: true
+  featureClass: null
+  field_alias: Node ID
+  field_length: 100
+  field_name: *field_name_node_id
+  field_type: TEXT
+- featureClass: null
+  field_name: *field_name_count
+  field_type: LONG
+- featureClass: null
+  field_alias: Associated Way IDs
+  field_length: 1000
+  field_name: *field_name_link_origid
+  field_type: TEXT
+
+# Fields used in BOTH network ways and network nodes feature classes
+project_ways_nodes_fc:
+- featureClass: null
+  field_alias: Original Tag Label
+  field_length: 200
+  field_name: *field_name_highway
+  field_type: TEXT
+- featureClass: null
+  field_alias: Segment is a Motorway Tag
+  field_name: *field_name_motorway
+  field_type: LONG
+- featureClass: null
+  field_alias: Personal Vehicle Mode
+  field_name: *field_name_vehicle_mode
+  field_type: LONG
+- featureClass: null
+  field_alias: Freight Truck Mode
+  field_name: *field_name_truck_mode
+  field_type: LONG
+- featureClass: null
+  field_alias: Pedestrian Mode
+  field_name: *field_name_pedestrian_mode
+  field_type: LONG
+- featureClass: null
+  field_alias: Bicycle Mode
+  field_name: *field_name_bicycle_mode
+  field_type: LONG
+- featureClass: null
+  field_alias: Low-Stress Walking Mode
+  field_name: *field_name_p_pedestrian_mode
+  field_type: LONG
+- featureClass: null
+  field_alias: Low-Stress Bicycle Mode
+  field_name: *field_name_p_bicycle_mode
+  field_type: LONG
+
+prepost_fields:
+- featureClass: null
+  field_alias: Exists in Original Network
+  field_name: *field_name_prenetwork
+  field_type: LONG
+- featureClass: null
+  field_alias: Exists in Scenario Network
+  field_name: *field_name_postnetwork
+  field_type: LONG
+
+pois_fields:
+- add_index: true
+  featureClass: null
+  field_length: 100
+  field_name: *field_name_poi_original
+  field_type: TEXT
+- featureClass: null
+  field_alias: All Original Tags
+  field_length: 900
+  field_name: *field_name_alltags
+  field_type: TEXT
+- featureClass: null
+  field_length: 255
+  field_name: *field_name_poi_fclass
+  field_type: TEXT
+- featureClass: null
+  field_length: 1000
+  field_name: *field_name_poi_wayid
+  field_type: TEXT
+- featureClass: null
+  field_length: 500
+  field_name: *field_name_poi_finalid
+  field_type: TEXT
+
+origins_fields:
+- add_index: true
+  featureClass: null
+  field_alias: Origin ID
+  field_length: 100
+  field_name: *field_name_origin_id
+  field_type: TEXT
+- featureClass: null
+  field_alias: Origin Name
+  field_length: 250
+  field_name: *field_name_origin_name
+  field_type: TEXT
+- featureClass: null
+  field_alias: Population
+  field_name: *field_name_population
+  field_type: DOUBLE
+- featureClass: null
+  field_alias: Households
+  field_name: *field_name_housing_units
+  field_type: DOUBLE
+
+network_table_fields:
+- featureClass: null
+  field_length: 250
+  field_name: *field_name_network_uid
+  field_type: TEXT
+- featureClass: null
+  field_length: 250
+  field_name: *field_name_network_mode
+  field_type: TEXT
+- featureClass: null
+  field_length: 250
+  field_name: *field_name_network_edgeweight
+  field_type: TEXT
+- featureClass: null
+  field_length: 250
+  field_name: *field_name_network_prepost
+  field_type: TEXT
+- featureClass: null
+  field_length: 250
+  field_name: *field_name_network_filename
+  field_type: TEXT
+
+integrate_ways_fc:
+- add_index: true
+  featureClass: null
+  field_alias: Segment ID
+  field_length: 100
+  field_name: *field_name_way_id  
+  field_type: TEXT
+
+integrate_nodes_fc:
+- add_index: true
+  featureClass: null
+  field_alias: Segment ID
+  field_length: 100
+  field_name: *field_name_node_id
+  field_type: TEXT
+
+integrate_ways_nodes_fc:
+- featureClass: null
+  field_alias: Original Tag Label
+  field_length: 200
+  field_name: *field_name_highway
+  field_type: TEXT
+- featureClass: null
+  field_alias: Segment is a Motorway Tag
+  field_name: *field_name_motorway
+  field_type: LONG
+- featureClass: null
+  field_alias: All Original Tags
+  field_length: 900
+  field_name: *field_name_alltags
+  field_type: TEXT
+- featureClass: null
+  field_alias: Segment is Oneway
+  field_length: 100
+  field_name: *field_name_oneway
+  field_type: TEXT
+- featureClass: null
+  field_alias: Personal Vehicle Mode
+  field_name: *field_name_vehicle_mode
+  field_type: LONG
+- featureClass: null
+  field_alias: Freight Truck Mode
+  field_name: *field_name_truck_mode
+  field_type: LONG
+- featureClass: null
+  field_alias: Pedestrian Mode
+  field_name: *field_name_pedestrian_mode
+  field_type: LONG
+- featureClass: null
+  field_alias: Bicycle Mode
+  field_name: *field_name_bicycle_mode
+  field_type: LONG
+- featureClass: null
+  field_alias: Low-Stress Walking Mode
+  field_name: *field_name_p_pedestrian_mode
+  field_type: LONG
+- featureClass: null
+  field_alias: Low-Stress Bicycle Mode
+  field_name: *field_name_p_bicycle_mode
+  field_type: LONG
+- featureClass: null
+  field_alias: Speed for Vehicle
+  field_name: *field_name_speed_vehicle
+  field_type: DOUBLE
+- featureClass: null
+  field_alias: Speed for Freight Truck
+  field_name: *field_name_speed_truck
+  field_type: DOUBLE
+- featureClass: null
+  field_alias: Speed for Walking
+  field_name: *field_name_speed_pedestrian
+  field_type: DOUBLE
+- featureClass: null
+  field_alias: Speed for Bicycle
+  field_name: *field_name_speed_bicycle
+  field_type: DOUBLE
+- featureClass: null
+  field_alias: Speed for Low Stress Bicycle
+  field_name: *field_name_speed_p_bike
+  field_type: DOUBLE
+- featureClass: null
+  field_alias: Segment Length in Meters
+  field_name: *field_name_length_meters
+  field_type: DOUBLE
+- featureClass: null
+  field_alias: Bicycle Free Flow Travel On Segment
+  field_name: *field_name_fft_bike
+  field_type: DOUBLE
+- featureClass: null
+  field_alias: Pedestrian Free Flow Travel On Segment
+  field_name: *field_name_fft_ped
+  field_type: DOUBLE
+- featureClass: null
+  field_alias: Vehicle Free Flow Travel On Segment
+  field_name: *field_name_fft_vehicle
+  field_type: DOUBLE
+- featureClass: null
+  field_alias: Freight Truck Free Flow Travel On Segment
+  field_name: *field_name_fft_truck
+  field_type: DOUBLE
+- featureClass: null
+  field_alias: Low-Stress Bike Free Flow Travel On Segment
+  field_name: *field_name_fft_p_bike
+  field_type: DOUBLE
+- featureClass: null
+  field_alias: Exists in Original Network
+  field_name: *field_name_prenetwork
+  field_type: LONG
+- featureClass: null
+  field_alias: Exists in Scenario Network
+  field_name: *field_name_postnetwork
+  field_type: LONG
+- add_index: true
+  featureClass: null
+  field_alias: From ID
+  field_length: 100
+  field_name: *field_name_from_id
+  field_type: TEXT
+- add_index: true
+  featureClass: null
+  field_alias: To ID
+  field_length: 100
+  field_name: *field_name_to_id
+  field_type: TEXT
+
+scenario_table_fields:
+- featureClass: null
+  field_length: 100
+  field_name: *field_name_scenario_name
+  field_type: TEXT
+- featureClass: null
+  field_name: *field_name_scenario_buffer
+  field_type: DOUBLE
+- featureClass: null
+  field_name: *field_name_scenario_creation
+  field_type: DATE
+- featureClass: null
+  field_name: *field_name_scenario_gdb
+  field_type: TEXT
+- featureClass: null
+  field_name: *field_name_scenario_modes
+  field_type: TEXT
+- featureClass: null
+  field_name: *field_name_scenario_poidist
+  field_type: DOUBLE
+- featureClass: null
+  field_length: 100
+  field_name: *field_name_origin_type
+  field_type: TEXT
+- featureClass: null
+  field_name: *field_name_scenario_lat
+  field_type: DOUBLE
+- featureClass: null
+  field_name: *field_name_scenario_lon
+  field_type: DOUBLE
+- featureClass: null
+  field_name: *field_name_origin_lat
+  field_type: DOUBLE
+- featureClass: null
+  field_name: *field_name_origin_lon
+  field_type: DOUBLE
+- featureClass: null
+  field_name: *field_name_selected_poi_categories
+  field_type: TEXT
+  field_length: 600
+
+field_mode_prefix:
+- vehicle
+- truck
+- bike
+- pedestrian
+- p_bike
+
+fields_to_integrate:
+- *field_name_way_id
+- *field_name_highway
+- *field_name_motorway
+- *field_name_oneway
+- *field_name_vehicle_mode
+- *field_name_truck_mode
+- *field_name_pedestrian_mode
+- *field_name_bicycle_mode
+- *field_name_p_bicycle_mode
+- *field_name_p_pedestrian_mode
+- *field_name_speed_vehicle
+- *field_name_speed_truck
+- *field_name_speed_pedestrian
+- *field_name_speed_bicycle
+- *field_name_speed_p_bike
+- *field_name_prenetwork
+- *field_name_postnetwork
+- *field_name_from_id
+- *field_name_to_id
+
+fields_to_remove:
+- *field_name_count
+- *field_name_alltags
+- *field_name_cfcc
+- *field_name_sidewalk
+- *field_name_bikelane
+- *field_name_separated_bike
+- *field_name_separated_sidewalk
+- *field_name_length_meters
+- *field_name_fft_bike
+- *field_name_fft_ped
+- *field_name_fft_vehicle
+- *field_name_fft_truck
+- *field_name_fft_p_bike
+
+action_options:
+- UPDATED
+- NEW
+- REMOVED

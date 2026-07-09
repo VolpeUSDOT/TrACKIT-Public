@@ -1,0 +1,26 @@
+[project]
+site_name = "User Guide"
+description = "Transportation Access and Connectivity Key Insights Tool (TrACKIT) User Guide"
+repo_url = "https://github.com/VolpeUSDOT/TrACKIT-Public"
+site_dir = "build" 
+nav = [
+    { "Introduction" = "index.md" },
+    { "Installation" = "installation.md" },
+    { "Step 1: Base Dataset" = "step1.md" },
+    { "Step 2: Project Scenarios" = "step2.md" },
+    { "Network Edit Instructions" = "network_edits.md"},
+    { "Step 3: Access Metrics" = "step3.md" },
+    { "Maintenance" = "maintenance.md" },
+    { "Network Attribute Assignment Rules" = "network_assignment_rules.md" },
+    { "Analysis Examples" = "analysis_examples.md" },
+    { "FAQs and Troubleshooting" = "faqs.md" },
+    { "Contact Us" = "contact.md" },
+    {"License Agreement" = "EULA.md" }
+]
+
+[theme]
+variant = "default"
+
+[project.theme]
+logo = "media/image1.png"
+favicon = "media/TrACKIT_Logo_R.png"

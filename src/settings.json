@@ -1,0 +1,297 @@
+{
+  "census_fields_to_keep": [
+    "GEOID",
+    "STATE",
+    "COUNTY",
+    "TRACT",
+    "BLKGRP",
+    "BLOCK",
+    "NAME",
+    "HU100",
+    "POP100"
+  ],
+  "mode_name_matching": {
+    "Personal Vehicle": "vehicle",
+    "Freight Truck": "truck",
+    "Bicycle": "bike",
+    "Pedestrian": "pedestrian",
+    "Low Stress Bicycle": "p_bike",
+    "Low Stress Pedestrian": "p_pedestrian"
+  },
+  "net_type_name_matching": {
+    "Original Network": "prenetwork",
+    "Scenario Network": "postnetwork"
+  },
+  "matching_tolerance_meters": ".08",
+  "default_bike_in_pedestrian": 3,
+  "default_values": {
+    "vehicle": 0,
+    "truck": 0,
+    "pedestrian": 0,
+    "bike": 0,
+    "p_pedestrian": 0,
+    "p_bike": 0,
+    "length_meters": 0.0000000000001,
+    "speed_bike": 10.0,
+    "speed_p_bike": 10.0,
+    "speed_pedestrian": 3.0,
+    "speed_vehicle": 25.0,
+    "speed_truck": 25.0,
+    "fft_bike": 1.0,
+    "fft_pedestrian": 1.0,
+    "fft_vehicle": 1.0,
+    "fft_truck": 1.0
+  },
+  "default_auto_speeds": {
+    "10": [
+      "living_street",
+      "service"
+    ],
+    "55": [
+      "motorway",
+      "motorway_link"
+    ],
+    "20": [
+      "residential"
+    ],
+    "35": [
+      "trunk",
+      "trunk_link"
+    ],
+    "0": [
+      "footway",
+      "path",
+      "pedestrian",
+      "cycleway"
+    ]
+  },
+  "default_bike_speeds": {
+    "3": [
+      "footway",
+      "path",
+      "pedestrian",
+      "sidewalk",
+      "corridor",
+      "steps"
+    ]
+  },
+  "walkBikeAllowed": [
+    "residential",
+    "unclassified",
+    "living_street",
+    "cycleway",
+    "path",
+    "pedestrian",
+    "footpath",
+    "footway",
+    "sidewalk",
+    "sidwalk=both",
+    "trailhead",
+    "crossing",
+    "track",
+    "trail"
+  ],
+  "walkAllowed": [
+    "corridor",
+    "steps",
+    "tertiary",
+    "tertiary_link"
+  ],
+  "reverseBikeLaneYes": [
+    "cycleway:opposite_lane",
+    "cycleway:left:opposite_lane",
+    "cycleway:right:opposite_lane",
+    "cycleway:both:opposite_lane"
+  ],
+  "reverseBikeLaneNo": [
+    "oneway:bicycle"
+  ],
+  "walkAllowedNoSidewalkTag": [
+    "primary",
+    "primary_link",
+    "secondary",
+    "secondary_link",
+    "unclassified"
+  ],
+  "bikeAllowed": [
+    "primary",
+    "primary_link",
+    "secondary",
+    "secondary_link",
+    "tertiary",
+    "tertiary_link",
+    "track"
+  ],
+  "bikeAllowedIfBikeLane": [
+    "trunk",
+    "trunk_link"
+  ],
+  "bikeAlwaysFriendly": [
+    "residential",
+    "living_street",
+    "cycleway",
+    "sidewalk",
+    "footway",
+    "crossing",
+    "path",
+    "track"
+  ],
+  "bikeFriendlyIfBikeLane": [
+    "unclassified",
+    "tertiary",
+    "tertiary_link"
+  ],
+  "bikeFriendlyIfProtectedBikeLane": [
+    "primary",
+    "primary_link",
+    "secondary",
+    "secondary_link",
+    "trunk",
+    "trunk_link"
+  ],
+  "bikeLaneProtected": [
+    "cycleway:buffer",
+    "cycleway:buffer:right",
+    "cycleway:right:buffer",
+    "cycleway:left:buffer",
+    "cycleway:both:buffer",
+    "cycleway:separation",
+    "cycleway:right:separation",
+    "cycleway:left:separation",
+    "cycleway:both:separation",
+    "cycleway:track",
+    "cycleway:right:track",
+    "cycleway:left:track",
+    "cycleway:both:track",
+    "cycleway:separation:flex_post",
+    "cycleway:right:separation:flex_post",
+    "cycleway:left:separation:flex_post",
+    "cycleway:buffer:yes",
+    "cycleway:buffer:right:yes",
+    "cycleway:right:buffer:yes",
+    "cycleway:left:buffer:yes",
+    "cycleway:both:buffer:yes",
+    "cycleway:separation:yes",
+    "cycleway:right:separation:yes"
+  ],
+  "doesItHaveaBikeLane": [
+    "cycleway",
+    "cycleway:right",
+    "cycleway:left",
+    "cycleway:both",
+    "cycleway:lane",
+    "cycleway:lane:right",
+    "cycleway:right:lane",
+    "cycleway:left:lane",
+    "cycleway:both:lane"
+  ],
+  "doesItHaveaSidewalk": [
+    "sidewalk",
+    "footway",
+    "sidewalk_1",
+    "sidewalk:left",
+    "sidewalk:both",
+    "sidewalk:right",
+    "sidewalk:both:bicycle",
+    "sidewalk:right:bicycle",
+    "sidewalk:separate",
+    "sidewalk:left:separate",
+    "sidewalk:separate:both",
+    "sidewalk:both:separate",
+    "sidewalk:separate:right",
+    "sidewalk:right:separate",
+    "sidewalk:surface",
+    "sidewalk:left:surface",
+    "sidewalk:both:surface",
+    "sidewalk:right:surface",
+    "sidewalk:both:kerb",
+    "sidewalk:surface:concrete",
+    "sidewalk:left:surface:concrete",
+    "sidewalk:both:surface:concrete",
+    "sidewalk:right:surface:concrete",
+    "sidewalk:both:surface:paving_stones",
+    "sidewalk:right:surface:paving_stones",
+    "sidewalk:both:kerb:raised",
+    "sidewalk:yes",
+    "sidewalk:left:yes",
+    "sidewalk:both:yes",
+    "sidewalk:right:yes",
+    "sidewalk:both:bicycle:yes",
+    "sidewalk:right:bicycle:yes"
+  ],
+  "doesItHaveProtectedSidewalk": [
+    "sidewalk:separate",
+    "sidewalk:left:separate",
+    "sidewalk:separate:both",
+    "sidewalk:both:separate",
+    "sidewalk:separate:right",
+    "sidewalk:right:separate"
+  ],
+  "setRoadToZero": [
+    "crossing",
+    "corridor",
+    "proposed",
+    "track",
+    "construction",
+    "steps",
+    "busway",
+    "bus_stop",
+    "bridleway",
+    "raceway",
+    "racetrack",
+    "emergency_bay",
+    "platform",
+    "rest_area",
+    "yes",
+    "elevator",
+    "service",
+    "services",
+    "cycleway",
+    "path",
+    "pedestrian",
+    "proposed",
+    "footpath",
+    "footway",
+    "sidewalk",
+    "sidwalk=both",
+    "trailhead",
+    "trail"
+  ],
+  "setTruckToZero": [
+    "residential",
+    "living_street"
+  ],
+  "hgv_restrictions": [
+    "no",
+    "discouraged"
+  ],
+  "hgv_local": [
+    "destination",
+    "delivery",
+    "local"
+  ],
+  "bikeOnFootway": [
+    "pedestrian",
+    "footpath",
+    "footway",
+    "sidewalk",
+    "path"
+  ],
+  "bikeBarriers": [
+    "steps"
+  ],
+  "setNonAutoToZeroHighway": [
+    "motorway",
+    "motorway_link",
+    "proposed",
+    "service",
+    "services",
+    "construction"
+  ],
+  "setWalkToZeroIfNo": [
+    "foot"
+  ],
+  "setBikeToZeroIfNo": [
+    "bicycle"
+  ]
+}

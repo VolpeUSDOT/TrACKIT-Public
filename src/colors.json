@@ -1,0 +1,69 @@
+{
+  "colors_for_categories": [
+    "#CC79A7",
+    "#999999",
+    "#0072B2",
+    "#009E73",
+    "#B2DF8A",
+    "#D55E00",
+    "#56B4E9",
+    "#000000",
+    "#F0E442",
+    "#6A3D9A",
+    "#E69F00",
+    "#1F78B4",
+    "#A6CEE3",
+    "#E31A1C",
+    "#33A02C",
+    "#FF7F00",
+    "#FB9A99",
+    "#FDBF6F",
+    "#B15928",
+    "#1B9E77",
+    "#D95F02",
+    "#7570B3",
+    "#E7298A",
+    "#E6AB02",
+    "#66A61E"
+  ],
+
+  "mode_colors": {
+    "vehicle": "#D55E00",
+    "truck": "#6f009c",
+    "pedestrian": "#B2DF8A",
+    "bike": "#56B4E9",
+    "p_pedestrian": "#009E73",
+    "p_bike": "#0072B2"
+  },
+
+  "network_type_colors": {
+    "Original Network": "#999999",
+    "Scenario Network": "#32CD32"
+  },
+
+  "report_settings": {
+    "height_in": 10,
+    "width_in": 8,
+    "dpi": 200
+  },
+  "colors_for_access_groups_cumulative_rgba": {
+    "Significant Decrease in Access": [230, 25, 75, 255],
+    "Some Decrease in Access": [255, 165, 0, 255],
+    "No Change in Access": [255, 215, 0, 255],
+    "Some Increase in Access": [145, 205, 86, 255],
+    "Significant Increase in Access": [0, 128, 0, 255]
+  },
+  "colors_for_access_groups_dual_rgba": {
+    "Significant Decrease in Travel Time": [0, 128, 0, 255],
+    "Some Decrease in Travel Time": [145, 205, 86, 255],
+    "No Change in Travel Time": [255, 215, 0, 255],
+    "Some Increase in Travel Time": [255, 165, 0, 255],
+    "Significant Increase in Travel Time": [230, 25, 75, 255]
+  },
+  "action_colors": {
+    "NEW": [0, 112, 255, 80],
+    "UPDATED": [169, 0, 230, 80],
+    "REMOVED": [255, 0, 0, 80],
+    "EXISTING": [178, 178, 178, 85]
+  }
+}
