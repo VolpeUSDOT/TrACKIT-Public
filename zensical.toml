@@ -24,3 +24,7 @@ variant = "default"
 [project.theme]
 logo = "media/image1.png"
 favicon = "media/TrACKIT_Logo_R.png"
+
+[project.extra.analytics]
+provider = "google"
+property = "G-67NKTSCFFW"
