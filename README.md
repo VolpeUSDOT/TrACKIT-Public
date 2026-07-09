@@ -1,6 +1,6 @@
 # Transportation Access & Connectivity Key Insights Tool (TrACKIT)
 <p align="center">
-  <img src="https://github.com/VolpeUSDOT/TrACKIT/blob/main/TrACKIT_Logo_v1.png" alt="TrACKIT Logo" style="max-width:300px; width:50%; height:auto;" />
+  <img src="TrACKIT_Logo_v1.png" alt="TrACKIT Logo" style="max-width:300px; width:50%; height:auto;" />
 </p>
 
 To use:
@@ -9,7 +9,7 @@ To use:
 2. In ArcGIS Pro's Catalog pane, right-click on "Folders"
 3. Select "Add Folder Connection"
 4. Navigate to where the TrACKIT repository is saved on your computer, and select the folder
-5. Explore the [User Guide](https://VolpeUSDOT.github.io/TrACKIT/) for more guidance
+5. Explore the [User Guide](https://VolpeUSDOT.github.io/TrACKIT-Public/) for more guidance
 
 ## OpenStreetMap License
 
