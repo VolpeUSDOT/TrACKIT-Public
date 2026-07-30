@@ -11,6 +11,7 @@ import time
 from messenger import custTypes
 from messenger import custMessenger
 from managers import settingsManager
+from static_tools import random_id
 class downloader(settingsManager):
     def __init__(self, projectFolder:Path, messages:custMessenger = None):
         """
@@ -27,7 +28,9 @@ class downloader(settingsManager):
         self.max_retries = 5
         self.pauses = 20
         self.chunksize = 65536#2*1024
-
+        projName = Path(projectFolder).name.replace("_project", "")
+        ua_suffix = random_id.create_random_id("UA", set())
+        self.overpass_user_agent = (f"{projName}_{ua_suffix}")
 
     def download_data_bbox(self, minlat:float,
                               minlong:float,
@@ -94,7 +97,7 @@ class osm_overpass_ways(downloader):
             try:
                 response = session.get(self.root_url, 
                                 params={'data': ways_query.format(minlat,minlong,maxlat,maxlong)}, stream=True, timeout=(10,ctimeout),
-                                headers = {"User-Agent": "TrACKIT Tool"})
+                                headers = {"User-Agent": self.overpass_user_agent})
                 response.raise_for_status()
                 self.messages.send_message("Streaming Ways download from Overpass.")
                 self.messages.set_progressor("Downloading ways from Overpass...",
@@ -215,7 +218,7 @@ class osm_overpass_poi(downloader):
                 response = session.get(self.root_url, 
                                         params={'data': poi_query.format(minlat,minlong,maxlat,maxlong,self.settings_info["poi_values_as_string"])},
                                         stream=True, timeout=(10,ctimeout),
-                                        headers = {"User-Agent": "TrACKIT Tool"})
+                                        headers = {"User-Agent": self.overpass_user_agent})
                 response.raise_for_status()
                 self.messages.send_message("Streaming POI download from Overpass.")
                 self.messages.set_progressor("Downloading POI from Overpass...",
@@ -330,7 +333,7 @@ class osm_overpass_water(downloader):
             try:
                 response = session.get(self.root_url, 
                                         params={'data': water_query.format(minlat,minlong,maxlat,maxlong)}, stream=True, timeout=(10,ctimeout),
-                                        headers = {"User-Agent": "TrACKIT Tool"})
+                                        headers = {"User-Agent": self.overpass_user_agent})
                 response.raise_for_status()
                 self.messages.send_message("Streaming Water download from Overpass.")
                 self.messages.set_progressor("Downloading water from Overpass...",
